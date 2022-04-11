@@ -8,8 +8,8 @@ import { Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
   quotes:Quote[] = [
-    new Quote(1,'"Continue to share your heart with people even if it has been broken."',0,0,'Amy Poehler',new Date(2020,3,14)),
-    new Quote(2,'“The fool doth think he is wise, but the wise man knows himself to be a fool.”',0,0,'William Shakespear',new Date(2020,3,14)),
+    new Quote(1,'"Continue to share your heart with people even if it has been broken."',0,0,'Amy Poehler','Love',new Date(2020,3,14)),
+    new Quote(2,'“The fool doth think he is wise, but the wise man knows himself to be a fool.”',0,0,'William Shakespear','wisdom',new Date(2020,3,14)),
 
   ];
 

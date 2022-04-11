@@ -6,6 +6,7 @@ export class Quote {
     public upvote:number,
     public downvote:number,
     public author: string,
+    public title: string,
     public completeDate:Date
     )
     {
