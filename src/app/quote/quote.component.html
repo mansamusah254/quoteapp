@@ -1,19 +1,23 @@
 
 <div>
-    <h1>My Goals</h1>
+    <h1><strong><u>Wisdom Avenue Quotes</u></strong> </h1>
     <hr>
-    <ul>
-        <div *ngFor='let quote of quotes;let i = index'>
-            <li >
-                {{quote.quote}}
-                <span><i class='bx bxs-like bx-sm counter'(click)='upVote(i)'></i>{{quote.upvote}}</span> 
-                <span><i class='bx bxs-like bx-sm bx-flip-vertical counter'(click)='downVote(i)'></i>{{quote.downvote}}</span>
-            </li>
-        
-            <button class="btn btn-success" (click)='toggleDetails(i)'>Toggle Details</button>
-            <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'deleteGoal($event,i)'></app-quote-detail>
-        </div>       
-    </ul>
-    <p *ngIf='quotes.length > 5'>Your goals are too many</p>
-  </div>
-  <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+    <div class="card" style="width: 30rem;">
+        <ul>
+            <div *ngFor='let quote of quotes;let i = index'>
+                <li >
+                    {{quote.quote}}
+                    <br><span><i class='bx bxs-like bx-sm counter'(click)='upVote(i)'></i>{{quote.upvote}}</span> 
+                    <br><span><i class='bx bxs-like bx-sm bx-flip-vertical counter'(click)='downVote(i)'></i>{{quote.downvote}}</span>
+                </li>
+            
+                <button class="btn btn-success" (click)='toggleDetails(i)'>Toggle Details</button>
+                <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'deleteGoal($event,i)'></app-quote-detail>
+            </div>       
+        </ul>
+        <p *ngIf='quotes.length > 5'>Your goals are too many</p>
+      </div>
+      <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+    
+    </div>
+    
