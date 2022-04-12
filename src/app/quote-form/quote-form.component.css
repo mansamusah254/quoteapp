@@ -8,8 +8,8 @@ h2{
 .container-fluid{
     max-width: 600px;
     margin-top: -20px;
-    position: fixed;
-    margin-left: 800px;
+    position: relative;
+    float: inline-end;
 }
 #quote{
     overflow: hidden;
