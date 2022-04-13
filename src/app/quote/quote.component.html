@@ -5,7 +5,7 @@
     <div class="card" style="width: 30rem;">
         <ul>
             <div *ngFor='let quote of quotes;let i = index'>
-                <li >
+                <li appHighlight>
                     {{quote.quote}}
                     <br><span><i class='bx bxs-like bx-sm counter'(click)='upVote(i)'></i>{{quote.upvote}}</span> 
                     <br><span><i class='bx bxs-like bx-sm bx-flip-vertical counter'(click)='downVote(i)'></i>{{quote.downvote}}</span>
