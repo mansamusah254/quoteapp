@@ -5,9 +5,9 @@
     <div class="card" style="width: 30rem;">
         <ul>
             <div *ngFor='let quote of quotes;let i = index'>
-                <div *ngIf="quote.upvote==1; then highlight empty"></div>
+                <div *ngIf="quote.upvote==highest; then highlight empty"></div>
                 <ng-template #highlight>
-                    <li *ngIf='quote.upvote==1' appHighlight>
+                    <li *ngIf='quote.upvote==highest' appHighlight>
                     {{quote.quote}}
                     <br><span><i class='bx bxs-like bx-sm counter'(click)='upVote(i)'></i>{{quote.upvote}}</span> 
                     <br><span><i class='bx bxs-like bx-sm bx-flip-vertical counter'(click)='downVote(i)'></i>{{quote.downvote}}</span>
