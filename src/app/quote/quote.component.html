@@ -5,11 +5,22 @@
     <div class="card" style="width: 30rem;">
         <ul>
             <div *ngFor='let quote of quotes;let i = index'>
-                <li appHighlight>
+                <div *ngIf="quote.upvote==1; then highlight empty"></div>
+                <ng-template #highlight>
+                    <li *ngIf='quote.upvote==1' appHighlight>
                     {{quote.quote}}
                     <br><span><i class='bx bxs-like bx-sm counter'(click)='upVote(i)'></i>{{quote.upvote}}</span> 
                     <br><span><i class='bx bxs-like bx-sm bx-flip-vertical counter'(click)='downVote(i)'></i>{{quote.downvote}}</span>
                 </li>
+                </ng-template>
+                <li #empty>
+                    {{quote.quote}}
+                    <br><span><i class='bx bxs-like bx-sm counter'(click)='upVote(i)'></i>{{quote.upvote}}</span> 
+                    <br><span><i class='bx bxs-like bx-sm bx-flip-vertical counter'(click)='downVote(i)'></i>{{quote.downvote}}</span>
+                </li>
+                <ng-template>
+
+                </ng-template>
             
                 <button class="btn btn-success" (click)='toggleDetails(i)'>Toggle Details</button>
                 <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'deleteGoal($event,i)'></app-quote-detail>

@@ -14,6 +14,8 @@ export class QuoteComponent implements OnInit {
 
   ];
 
+    // arr=this.quotes
+
   toggleDetails(index){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }
