@@ -6,11 +6,7 @@ h2{
     font-size: 20px;
 }
 .container-fluid{
-    max-width: 600px;
-    margin-top: -20px;
-    position: relative;
-    float: inline-end;
-}
-#quote{
-    overflow: hidden;
+    max-width: 600px;  
+    /* float: inline-end; */
+    position: sticky;
 }

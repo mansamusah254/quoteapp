@@ -8,7 +8,7 @@ import { Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
   quotes:Quote[] = [
-    new Quote(1,'"Continue to share your heart with people even if it has been broken."',0,0,'Amy Poehler','Love',new Date(2020,3,14)),
+    new Quote(1,'"Continue to share your heart with people even if it has been broken."',2,0,'Amy Poehler','Love',new Date(2020,3,14)),
     new Quote(2,'“The fool doth think he is wise, but the wise man knows himself to be a fool.”',0,0,'William Shakespear','Wisdom',new Date(2020,3,14)),
     new Quote(3,'“A recipe has no soul. You, as the cook, must bring soul to the recipe.”',0,0,'Miss Piggy','Food',new Date(2020,3,14)),
 
@@ -22,9 +22,9 @@ export class QuoteComponent implements OnInit {
   }
 
   addNewQuote(quote){
-    let goalLength = this.quotes.length;
-    quote.id = goalLength+1;
-    quote.completeDate = new Date(quote.completeDate)
+    // let goalLength = this.quotes.length;
+    // quote.id = goalLength+1;
+    // quote.completeDate = new Date(quote.completeDate)
     this.quotes.push(quote)
   }
 
